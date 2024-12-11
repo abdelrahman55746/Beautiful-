@@ -3,13 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beautiful store - ملابس رياضية</title>
-    <style><!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الدفع</title>
+    <title>Beautiful Store - متجر الهودي والتيشيرت</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,229 +11,165 @@
             margin: 0;
             padding: 0;
         }
-        .payment-form {
-            width: 400px;
-            margin: 50px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        .container {
+            width: 80%;
+            margin: 20px auto;
         }
-        .payment-form h2 {
+        h1 {
             text-align: center;
-            margin-bottom: 20px;
+            color: #333;
         }
-        .payment-form input,
-        .payment-form select,
-        .payment-form button {
-            width: 100%;
-            padding: 10px;
-            margin: 
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            direction: rtl;
-            display: flex;
-        }
-
-        /* Sidebar */
-        .sidebar {
-            width: 250px;
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
-
-        .sidebar h2 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .sidebar a {
-            display: block;
-            color: #fff;
-            text-decoration: none;
-            padding: 12px;
-            font-size: 18px;
-            margin-bottom: 10px;
-            transition: background-color 0.3s;
-        }
-
-        .sidebar a:hover {
-            background-color: #f0a500;
-        }
-
-        /* Main Content */
-        .main-content {
-            margin-left: 270px;
-            padding: 20px;
-            width: 100%;
-        }
-
-        .header {
-            background-color: #000;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .product-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
         .product {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            margin: 10px 0;
             background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-
         .product img {
-            width: 100%;
-            height: 250px;
+            width: 100px;
+            height: 100px;
             object-fit: cover;
+            border-radius: 8px;
         }
-
         .product-details {
-            padding: 15px;
+            flex-grow: 1;
+            margin-left: 10px;
         }
-
         .product-details h3 {
-            margin-bottom: 10px;
-            font-size: 20px;
+            margin: 0;
             color: #333;
         }
-
         .product-details p {
-            margin-bottom: 15px;
-            color: #777;
+            margin: 5px 0;
         }
-
-        .product-details .price {
-            font-size: 18px;
-            color: #f0a500;
-            font-weight: bold;
+        .form-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
         }
-
-        /* Cart and Payment */
-        .cart {
-            margin-top: 50px;
+        form {
+            display: flex;
+            flex-direction: column;
         }
-
-        .cart h3 {
-            font-size: 22px;
-            margin-bottom: 20px;
+        form label {
+            margin: 10px 0 5px;
         }
-
-        .cart-items {
-            margin-bottom: 20px;
+        form input,
+        form select,
+        form button {
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
         }
-
-        .cart-items p {
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
-
-        .total-price {
-            font-size: 20px;
-            font-weight: bold;
-            color: #f0a500;
-        }
-
-        .payment-info {
-            margin-top: 30px;
-            font-size: 18px;
-        }
-
-        footer {
-            background-color: #333;
+        form button {
+            background-color: #007bff;
             color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 40px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <h1>Beautiful Store - متجر الهودي والتيشيرت</h1>
 
-    <div class="sidebar">
-        <h2>بيوتيفل ستور</h2>
-        <a href="#">الرئيسية</a>
-        <a href="#">المنتجات</a>
-        <a href="#">الهوديز</a>
-        <a href="#">تيشرتات كوره</a>
-        <a href="#">سلة التسوق</a>
-        <a href="#">الدفع</a>
-    </div>
-
-    <div class="main-content">
-        <div class="header">
-            <h1>أهلاً بكم في Beautiful store - ملابس رياضية</h1>
-        </div>
-
-        <div class="product-container">
-            <!-- Hoodie Product -->
+        <!-- عرض المنتجات -->
+        <div id="products">
             <div class="product">
-                <img src="https://via.placeholder.com/300x250" alt="هودي">
+                <img src="hoodie.jpg" alt="هودي">
                 <div class="product-details">
-                    <h3>هودي رياضي</h3>
-                    <p>هودي دافئ ومريح للتمارين الرياضية.</p>        <p 
-                    class="price">350 جنيه مصري</p>
+                    <h3>هودي</h3>
+                    <p>السعر: 350 جنيه</p>
+                    <p>الكمية المتوفرة: 50 قطعة</p>
                 </div>
             </div>
 
-            <!-- T-shirt Product -->
             <div class="product">
-                <img src="https://via.placeholder.com/300x250" alt="تيشرت كوره">
+                <img src="tshirt.jpg" alt="تيشيرت">
                 <div class="product-details">
-                    <h3>تيشرت كوره</h3>
-                    <p>تيشرت مريح لمحبي رياضة كرة القدم.</p>
-                    <p class="price">250 جنيه مصري</p>
+                    <h3>تيشيرت</h3>
+                    <p>السعر: 200 جنيه</p>
+                    <p>الكمية المتوفرة: 50 قطعة</p>
                 </div>
             </div>
         </div>
 
-        <!-- Cart Section -->
-        <div class="cart">
-            <h3>سلة التسوق</h3>
-            <div class="cart-items">
-                <p>هودي رياضي - 350 جنيه مصري</p>
-                <p>تيشرت كوره 2000 جنيه مصري</p>
-            </div>
-            <div class="total-price">
-                <p>المجموع: 6000 جنيه مصري</p>
-            </div>
+        <!-- نموذج الدفع -->
+        <div class="form-container">
+            <h2>نموذج الدفع</h2>
+            <form action="process_payment.php" method="POST">
+                <label for="name">الاسم الكامل:</label>
+                <input type="text" id="name" name="name" placeholder="أدخل اسمك" required>
+
+                <label for="email">البريد الإلكتروني:</label>
+                <input type="email" id="email" name="email" placeholder="أدخل بريدك الإلكتروني" required>
+
+                <label for="card">رقم البطاقة:</label>
+                <input type="text" id="card" name="card" placeholder="أدخل رقم البطاقة" required>
+
+                <label for="expiry">تاريخ انتهاء الصلاحية:</label>
+                <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" placeholder="أدخل الرقم السري" required>
+
+                <button type="submit">إتمام الدفع</button>
+            </form>
         </div>
 
-        <!-- Payment Information -->
-        <div class="payment-info">
-            <h3>معلومات الدفع:</h3>
-            <p>الدفع عند الاستلام أو عبر البطاقة الائتمانية.</p>
-            <p>شحن سريع لجميع أنحاء مصر.</p>
+        <!-- نموذج إضافة المنتجات -->
+        <div class="form-container">
+            <h2>إضافة منتج جديد</h2>
+            <form action="add_product.php" method="POST" enctype="multipart/form-data">
+                <label for="product_name">اسم المنتج:</label>
+                <input type="text" id="product_name" name="product_name" placeholder="اسم المنتج" required>
+
+                <label for="description">وصف المنتج:</label>
+                <input type="text" id="description" name="description" placeholder="وصف المنتج" required>
+
+                <label for="price">السعر:</label>
+                <input type="number" id="price" name="price" step="0.01" placeholder="السعر" required>
+
+                <label for="category">الفئة:</label>
+                <input type="text" id="category" name="category" placeholder="فئة المنتج" required>
+
+                <label for="stock">الكمية:</label>
+                <input type="number" id="stock" name="stock" placeholder="الكمية المتوفرة" required>
+
+                <label for="image">صورة المنتج:</label>
+                <input type="file" id="image" name="image" accept="image/*" required>
+
+                <button type="submit">إضافة المنتج</button>
+            </form>
         </div>
 
+        <!-- نموذج الشحن -->
+        <div class="form-container">
+            <h2>تفاصيل الشحن</h2>
+            <form action="process_shipping.php" method="POST">
+                <label for="address">عنوان الشحن:</label>
+                <input type="text" id="address" name="address" placeholder="أدخل عنوان الشحن" required>
+
+                <label for="city">المدينة:</label>
+                <input type="text" id="city" name="city" placeholder="أدخل المدينة" required>
+
+                <label for="phone">رقم الهاتف:</label>
+                <input type="text" id="phone" name="phone" placeholder="أدخل رقم الهاتف" required>
+
+                <button type="submit">إتمام الشحن</button>
+            </form>
+        </div>
     </div>
-
-    <footer>
-        <p>© 2024 بيوتيفل ستور. جميع الحقوق محفوظة.</p>
-    </footer>
-
 </body>
 </html>
