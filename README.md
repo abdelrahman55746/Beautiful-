@@ -3,133 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ميسي  - موقع ملابس رياضية</title>
+    <title>Beautiful store - ملابس رياضية</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             direction: rtl;
-            background-color: #f9f9f9;
-        }
-        header {
-            background-color: #000;
-            color: #fff;
-            padding: 15px 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-        nav {
             display: flex;
-            justify-content: center;
-            background-color: #222;
-            padding: 10px 0;
         }
-        nav a {
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .sidebar a {
+            display: block;
             color: #fff;
             text-decoration: none;
-            margin: 0 15px;
+            padding: 12px;
             font-size: 18px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
         }
-        nav a:hover {
-            color: #f0a500;
+
+        .sidebar a:hover {
+            background-color: #f0a500;
         }
-        .container {
-            display: flex;
-            flex-wrap: wrap;
+
+        /* Main Content */
+        .main-content {
+            margin-left: 270px;
             padding: 20px;
-            gap: 20px;
-            justify-content: center;
+            width: 100%;
         }
+
+        .header {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
         .product {
             background-color: #fff;
-            width: 300px;
             border: 1px solid #ddd;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
+
         .product img {
             width: 100%;
             height: 250px;
             object-fit: cover;
         }
+
         .product-details {
             padding: 15px;
-            text-align: center;
         }
+
         .product-details h3 {
-            margin: 0 0 10px;
+            margin-bottom: 10px;
             font-size: 20px;
             color: #333;
         }
+
         .product-details p {
-            margin: 0 0 15px;
+            margin-bottom: 15px;
             color: #777;
         }
+
         .product-details .price {
             font-size: 18px;
             color: #f0a500;
             font-weight: bold;
         }
+
+        /* Cart and Payment */
+        .cart {
+            margin-top: 50px;
+        }
+
+        .cart h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .cart-items {
+            margin-bottom: 20px;
+        }
+
+        .cart-items p {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .total-price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #f0a500;
+        }
+
+        .payment-info {
+            margin-top: 30px;
+            font-size: 18px;
+        }
+
         footer {
-            background-color: #000;
+            background-color: #333;
             color: #fff;
             text-align: center;
             padding: 10px 0;
-            margin-top: 20px;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>ميسي - ملابس رياضية</h1>
-</header>
-
-<nav>
-    <a href="#">الرئيسية</a>
-    <a href="#">منتجات الرجال</a>
-    <a href="#">منتجات النساء</a>
-    <a href="#">الأطفال</a>
-    <a href="#">العروض</a>
-    <a href="#">اتصل بنا</a>
-</nav>
-
-<div class="container">
-    <div class="product">
-        <img src="https://via.placeholder.com/300x250" alt="تيشيرت رياضي">
-        <div class="product-details">
-            <h3>تيشيرت رياضي</h3>
-            <p>مصنوع من قماش عالي الجودة، مناسب للتمارين اليومية.</p>
-            <p class="price">200 جنيه مصري</p>
-        </div>
+    <div class="sidebar">
+        <h2>بيوتيفل ستور</h2>
+        <a href="#">الرئيسية</a>
+        <a href="#">المنتجات</a>
+        <a href="#">الهوديز</a>
+        <a href="#">تيشرتات كوره</a>
+        <a href="#">سلة التسوق</a>
+        <a href="#">الدفع</a>
     </div>
-    <div class="product">
-        <img src="https://via.placeholder.com/300x250" alt="بنطلون رياضي">
-        <div class="product-details">
-            <h3>بنطلون رياضي</h3>
-            <p>تصميم أنيق ومريح يناسب جميع الأنشطة الرياضية.</p>
-            <p class="price">350 جنيه مصري</p>
-        </div>
-    </div>
-    <div class="product">
-        <img src="https://via.placeholder.com/300x250" alt="جاكيت رياضي">
-        <div class="product-details">
-            <h3>جاكيت رياضي</h3>
-            <p>جاكيت دافئ وخفيف الوزن للمواسم الباردة.</p>
-            <p class="price">500 جنيه مصري</p>
-        </div>
-    </div>
-</div>
 
-<footer>
-    <p>© 2024 ميسي. جميع الحقوق محفوظة.</p>
-</footer>
+    <div class="main-content">
+        <div class="header">
+            <h1>أهلاً بكم في Beautiful store - ملابس رياضية</h1>
+        </div>
+
+        <div class="product-container">
+            <!-- Hoodie Product -->
+            <div class="product">
+                <img src="https://via.placeholder.com/300x250" alt="هودي">
+                <div class="product-details">
+                    <h3>هودي رياضي</h3>
+                    <p>هودي دافئ ومريح للتمارين الرياضية.</p>        <p 
+                    class="price">350 جنيه مصري</p>
+                </div>
+            </div>
+
+            <!-- T-shirt Product -->
+            <div class="product">
+                <img src="https://via.placeholder.com/300x250" alt="تيشرت كوره">
+                <div class="product-details">
+                    <h3>تيشرت كوره</h3>
+                    <p>تيشرت مريح لمحبي رياضة كرة القدم.</p>
+                    <p class="price">250 جنيه مصري</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Section -->
+        <div class="cart">
+            <h3>سلة التسوق</h3>
+            <div class="cart-items">
+                <p>هودي رياضي - 350 جنيه مصري</p>
+                <p>تيشرت كوره 2000 جنيه مصري</p>
+            </div>
+            <div class="total-price">
+                <p>المجموع: 6000 جنيه مصري</p>
+            </div>
+        </div>
+
+        <!-- Payment Information -->
+        <div class="payment-info">
+            <h3>معلومات الدفع:</h3>
+            <p>الدفع عند الاستلام أو عبر البطاقة الائتمانية.</p>
+            <p>شحن سريع لجميع أنحاء مصر.</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2024 بيوتيفل ستور. جميع الحقوق محفوظة.</p>
+    </footer>
 
 </body>
 </html>
-# Beautiful-
