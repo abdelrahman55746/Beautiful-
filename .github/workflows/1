@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- تضمين Font Awesome للأيقونات -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .sidebar {
+            width: 20%;
+            background: #007bff;
+            color: #fff;
+            padding: 20px;
+            height: 100vh;
+        }
+
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+            font-size: 18px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background: #0056b3;
+            padding: 5px;
+            transform: scale(1.05);
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 10px;
+            margin: 15px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .search-bar:focus {
+            outline: none;
+            border: 2px solid #0056b3;
+        }
+
+        .main-content {
+            width: 80%;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .product {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            padding: 10px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product img {
+            width: 100px;
+            height: 100px;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .product img:hover {
+            transform: scale(1.1);
+            filter: brightness(80%);
+        }
+
+        .product button {
+            position: relative;
+            overflow: hidden;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .product button::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: width 0.5s, height 0.5s, top 0.5s, left 0.5s;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .product button:hover::after {
+            width: 0;
+            height: 0;
+            top: 50%;
+            left: 50%;
+        }
+
+        .product button:hover {
+            background-color: #0056b3;
+        }
+
+        .social-share a {
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .social-share a:hover {
+            background-color: #0056b3;
+        }
+
+        .discounted-price {
+            font-weight: bold;
+            color: red;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+            }
+
+            .main-content {
+                width: 100%;
+            }
+
+            .product {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .product img {
+                width: 150px;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <a href="index.html">الرئيسية</a>
+            <a href="tshirts.html"><i class="fas fa-tshirt"></i> التيشيرتات</a>
+            <a href="hoodies.html"><i class="fas fa-socks"></i> الهودي</a>
+            <a href="checkout.html">الدفع</a>
+            <input type="text" placeholder="ابحث عن منتج..." class="search-bar">
+        </div>
+        <div class="main-content">
+            <h1>مرحبًا بكم في Beautiful Store</h1>
+            <p>اختر القسم الذي تريد استعراضه من القائمة الجانبية.</p>
+
+            <h2>التيشيرتات</h2>
+            <div class="product">
+                <img src="tshirt.jpg" alt="تيشيرت">
+                <div>
+                    <h3>تيشيرت</h3>
+                    <p>السعر: 200 جنيه</p>
+                    <p class="discounted-price">السعر بعد الخصم: 150 جنيه</p>
+                    <button>إضافة إلى السلة</button>
+                </div>
+            </div>
+
+            <h2>الهودي</h2>
+            <div class="product">
+                <img src="hoodie.jpg" alt="هودي">
+                <div>
+                    <h3>هودي</h3>
+                    <p>السعر: 350 جنيه</p>
+                    <p class="discounted-price">السعر بعد الخصم: 300 جنيه</p>
+                    <button>إضافة إلى السلة</button>
+                </div>
+            </div>
+
+            <div class="social-share">
+                <a href="#" class="facebook">فيسبوك</a>
+                <a href="#" class="twitter">تويتر</a>
+                <a href="#" class="whatsapp">واتساب</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
